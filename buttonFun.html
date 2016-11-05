@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	button {
+		background-color: blue;
+		color: white;
+	}
+
+	.red {
+		background-color: red;
+	}
+	
+	.green {
+		background-color: green;
+	}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<title>Some Button Fun!</title>
+
+</head>
+<body>
+	<button id="btn">Click Me</button>
+	<script type="text/javascript">
+		var button = document.getElementById("btn");
+		console.log(button);
+		button.addEventListener("click", whatToDoOnClick);
+		function whatToDoOnClick(){
+			$(this).toggleClass("red");
+		};
+		button.addEventListener("mouseover", hovering);
+		function hovering(){
+			$(this).hover(function(){
+				$(this).addClass("green");
+			},
+			function(){
+				$(this).removeClass("green");
+			})
+		};
+
+	</script>
+</body>
+</html>
