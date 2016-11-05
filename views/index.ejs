@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intro to Mongoose!</title>
+</head>
+<body>
+	<p>Let's create a basic form!</p>
+	<form action="/users" method="post">
+		Name: <input type="text" name="name">
+		Age: <input type="number" name="age">
+		<input type="submit" value="Submit!">
+	</form>
+	<div>
+		<h4>Users that were already created:</h4>
+		<% for (var key in user) { %>
+		<p>Name: <%=user[key].name %></p>
+		<p>Age: <%=user[key].age %></p>
+		<% } %>
+	</div>
+</body>
+</html>
